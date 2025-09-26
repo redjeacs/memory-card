@@ -3,7 +3,7 @@ function Card({ character }) {
     <div className="card">
       <div
         className="character-container"
-        style={{ backgroundImage: `url(${character.src})` }}
+        style={{ backgroundImage: `url(${character.spriteUrl})` }}
       ></div>
       <div className="character-name">{character.name}</div>
     </div>

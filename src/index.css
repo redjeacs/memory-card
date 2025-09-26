@@ -80,7 +80,18 @@ main {
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
   background-color: white;
   width: 180px;
   height: 200px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.character-container {
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: transparent;
 }
