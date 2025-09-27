@@ -81,11 +81,19 @@ main {
 
 .card {
   display: flex;
+  text-align: center;
   flex-direction: column;
   background-color: white;
   width: 180px;
   height: 200px;
   background-color: rgba(0, 0, 0, 0.1);
+  box-shadow: 4px 2px 5px rgb(0, 0, 0, 0.5);
+  font-family: "arcadeclassic";
+  cursor: pointer;
+}
+
+.card:hover {
+  background-color: rgba(168, 168, 168, 0.3);
 }
 
 .character-container {
@@ -94,4 +102,30 @@ main {
   background-position: center;
   background-size: cover;
   background-color: transparent;
+}
+
+.character-name {
+  padding: 10px;
+}
+
+/* Game Over */
+
+.modal-overlay {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(0, 0, 0, 0.3);
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+  background-color: whitesmoke;
 }

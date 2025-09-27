@@ -1,6 +1,6 @@
-function Card({ character }) {
+function Card({ character, onClick, isClicked }) {
   return (
-    <div className="card">
+    <div className={`card ${isClicked ? "clicked" : ""}`} onClick={onClick}>
       <div
         className="character-container"
         style={{ backgroundImage: `url(${character.spriteUrl})` }}

@@ -1,4 +1,4 @@
-function Header() {
+function Header({ score, bestScore }) {
   return (
     <header>
       <div className="logo">
@@ -10,8 +10,8 @@ function Header() {
         Memory Card
       </div>
       <div className="scores">
-        <div className="score">Score: </div>
-        <div className="best-score">Best Score: </div>
+        <div className="score">Score: {score}</div>
+        <div className="best-score">Best Score: {bestScore}</div>
       </div>
     </header>
   );
