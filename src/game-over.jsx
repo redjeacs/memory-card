@@ -1,8 +1,11 @@
-function GameOverModal({ score, onRestart, result, isVisible }) {
+function GameOverModal({ score, onRestart, result, isVisible, resultImg }) {
   return (
     <div
       className="modal-overlay"
-      style={{ display: isVisible ? "flex" : "none" }}
+      style={{
+        display: isVisible ? "flex" : "none",
+        backgroundImage: `url(${resultImg})`,
+      }}
     >
       <div className="modal-content">
         <h2>{result}</h2>

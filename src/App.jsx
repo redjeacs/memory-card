@@ -4,6 +4,8 @@ import Card from "./components/card";
 import getRandomPokemons from "./pokemon";
 import { useEffect, useState } from "react";
 import GameOverModal from "./game-over";
+import gameWin from "./assets/game-win.jpg";
+import gameLose from "./assets/game-lose.jpg";
 
 function App() {
   const [pokemons, setPokemons] = useState([]);
@@ -12,6 +14,7 @@ function App() {
   const [bestScore, setBestScore] = useState(0);
   const [modalVisibility, setModalVisibility] = useState(false);
   const [result, setResult] = useState("You Lose!");
+  const [resultImg, setResultImg] = useState(gameWin);
 
   useEffect(() => {
     getRandomPokemons(15).then((pokemons) => {
@@ -49,10 +52,12 @@ function App() {
   function checkWin(currentScore) {
     if (currentScore === pokemons.length) {
       setResult("You Win!");
+      setResultImg(gameWin);
       updateBestScore(currentScore);
       setModalVisibility(true);
     } else {
       setResult("You Lose!");
+      setResultImg(gameLose);
     }
   }
 
@@ -65,6 +70,7 @@ function App() {
       shuffleCards();
     } else {
       updateBestScore(score);
+      setResultImg(gameLose);
       setModalVisibility(true);
     }
   }
@@ -81,6 +87,7 @@ function App() {
         onRestart={handleRestart}
         result={result}
         isVisible={modalVisibility}
+        resultImg={resultImg}
       />
       <Header score={score} bestScore={bestScore} />
       <main>
