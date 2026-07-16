@@ -4,7 +4,7 @@ function Header({ score, bestScore }) {
       <div className="logo">
         <img
           className="logo-img"
-          src="../src/assets/pokemon-logo.png"
+          src="./src/assets/pokemon-logo.png"
           alt="pokemon logo"
         />
         Memory Card
