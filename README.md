@@ -1,4 +1,4 @@
-# Memory Card Game
+# 🎴Memory Card Game
 
 An engaging, interactive browser-based memory game built using **React** and powered by **Vite** for ultra-fast performance. 
 
